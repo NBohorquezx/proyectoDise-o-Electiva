@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Jhon Adolfo Arias Andrade, nacido el 21 de septiembre de 1997 en Quibdó, Chocó, es un talentoso futbolista colombiano que ha destacado tanto en su club, Fluminense, como en la Selección Colombia1. Su carrera profesional comenzó en el Club Llaneros en 2018, y desde entonces ha pasado por varios equipos colombianos, incluyendo Patriotas Boyacá, América de Cali e Independiente Santa Fe.
+        </p>
+        <br><br>
+        <p>
+          En 2021, Arias se unió a Fluminense en el Campeonato Brasileño de Serie A, donde rápidamente se convirtió en una pieza clave del equipo1. Su habilidad para jugar como extremo, combinada con su velocidad y destreza en el campo, le ha permitido acumular numerosos goles y asistencias. En abril de 2023, alcanzó los cien partidos con Fluminense, consolidándose como un jugador indispensable para el club.        </p>
+        <br><br>
+        <p>
+          Uno de los momentos más destacados de su carrera en Fluminense fue la conquista de la Copa Libertadores en 2023. Durante el torneo, Arias participó en todos los partidos, anotando dos goles y proporcionando tres asistencias, lo que le valió ser elegido como el Balón de Bronce del Mundial de Clubes 20231. Además, en febrero de 2024, marcó un doblete en la victoria sobre Liga de Quito, asegurando el título de la Recopa Sudamericana para su equipo.        </p>
+        <br><br>
+        <p>
+          En cuanto a su trayectoria con la Selección Colombia, Arias fue convocado por primera vez en mayo de 2022 para un amistoso contra Arabia Saudita1. Desde entonces, ha sido una presencia constante en el equipo nacional, participando en las eliminatorias para el Mundial de 2026 y en la Copa América 2024, donde Colombia terminó como subcampeón1. Su primer gol internacional lo anotó en un amistoso contra Rumania en marzo de 2024.        </p>
+        
+        <br><br>
+        
+        <p>
+          Arias ha demostrado ser un jugador versátil y confiable para la Selección Colombia, contribuyendo con asistencias cruciales en partidos importantes, como en la victoria sobre Venezuela en las eliminatorias1. Su desempeño ha sido fundamental para el equipo, y su habilidad para adaptarse a diferentes situaciones de juego lo convierte en un activo valioso para cualquier entrenador.        </p>
+        <br><br>
+        <p>
+          Recientemente, se ha anunciado que Arias dejará Fluminense a finales de 2024 para buscar nuevas oportunidades en Europa2. Esta decisión se tomó en medio de una temporada difícil para el club brasileño, que ha enfrentado eliminaciones en varios torneos y una campaña complicada en el Brasileirao. A pesar de estos desafíos, Arias ha mantenido un alto nivel de rendimiento, lo que ha despertado el interés de varios equipos europeos.        </p>
+        <br><br>
+        <p>
+          La salida de Arias de Fluminense marca el final de una etapa exitosa en su carrera, pero también abre la puerta a nuevas oportunidades y desafíos en el fútbol europeo. Su deseo de jugar en Europa refleja su ambición y determinación de seguir creciendo como futbolista, y seguramente continuará siendo una figura destacada tanto en su nuevo club como en la Selección Colombia.
+        </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j.arias.png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Fluminense.png" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Campeonato-Brasileiro-S%C3%A9rie-A-logo.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

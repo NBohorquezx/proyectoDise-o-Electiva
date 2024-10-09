@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Richard Ríos Montoya, nacido el 2 de junio de 2000 en Medellín, Colombia, es un talentoso futbolista que ha captado la atención tanto a nivel nacional como internacional. Comenzó su carrera en las divisiones inferiores del Atlético Nacional, uno de los clubes más importantes de Colombia. Desde joven, Ríos mostró un gran potencial, destacándose por su habilidad técnica, visión de juego y capacidad para marcar goles desde el mediocampo.
+        </p>
+        <br><br>
+        <p>
+          En 2019, Ríos fue promovido al primer equipo de Atlético Nacional, donde tuvo la oportunidad de debutar en la liga profesional colombiana. Su desempeño en el campo no pasó desapercibido, y pronto se convirtió en una pieza clave del equipo. Su habilidad para controlar el ritmo del juego y su precisión en los pases lo hicieron destacar entre sus compañeros y rivales.
+        </p>
+        <p>
+          El talento de Richard Ríos no se limitó a su club. En 2021, fue convocado a la selección sub-20 de Colombia, donde jugó un papel crucial en el Campeonato Sudamericano Sub-20. Su desempeño en el torneo fue impresionante, ayudando a Colombia a alcanzar las etapas finales y ganándose el reconocimiento como uno de los mejores mediocampistas jóvenes del continente.
+        </p>
+        <br><br>
+        <p>
+          En 2022, Ríos dio el salto al fútbol internacional al unirse al Palmeiras de Brasil, uno de los clubes más prestigiosos de América del Sur. Su adaptación al fútbol brasileño fue rápida, y pronto se convirtió en un jugador importante para el equipo. Con Palmeiras, Ríos ha ganado varios títulos, incluyendo el Campeonato Brasileño y la Copa Libertadores, consolidando su reputación como un mediocampista de clase mundial.
+        </p>
+        <p>
+          A nivel internacional, Richard Ríos ha comenzado a dejar su huella en la selección mayor de Colombia. Debutó en 2023 en un amistoso contra México, y desde entonces ha sido convocado regularmente para las eliminatorias del Mundial de 2026. Su capacidad para influir en el juego desde el mediocampo y su habilidad para marcar goles importantes lo han convertido en un jugador valioso para el equipo nacional.
+        </p>
+        <br><br>
+        <p>
+          Además de sus logros en el campo, Ríos es conocido por su dedicación y ética de trabajo. Fuera del campo, es un ejemplo de profesionalismo y humildad, siempre dispuesto a aprender y mejorar. Su actitud positiva y su compromiso con el equipo lo han convertido en un líder tanto dentro como fuera del campo.
+        </p>
+        <p>
+          En 2024, Ríos fue parte del equipo de Palmeiras que ganó la Recopa Sudamericana, añadiendo otro título importante a su ya impresionante palmarés. Su desempeño en el torneo fue destacado, y fue nombrado el mejor jugador del partido en la final. Este reconocimiento subraya su importancia para el equipo y su capacidad para rendir en los momentos más cruciales.
+        </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Genk%20(1).png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/belgium-country-flag.jpg" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/i.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

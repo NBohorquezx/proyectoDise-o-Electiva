@@ -1,0 +1,317 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+const jugadores = [
+  { nombre: 'C.VARGAS', numero: 1, posicion: 'portero', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/camilo_vargas.png'},
+  { nombre: 'C.CUESTA', numero: 2, posicion: 'defensa', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/camilo_cuesta.png'},
+  { nombre: 'D.SÁNCHEZ', numero: 23, posicion: 'defensa', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/d.sanchez.png'},
+  { nombre: 'D.MUÑOZ', numero: 4, posicion: 'defensa', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/d_mu%C3%B1oz.png'},
+  { nombre: 'J.MOJICA', numero: 17, posicion: 'defensa', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j_mojica.png'},
+  { nombre: 'R.RIOS', numero: 6, posicion: 'medio-defensivo', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/r_rios.png'},
+  { nombre: 'J.LERMA', numero: 16, posicion: 'medio-defensivo', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j.lerma.jpg'},
+  { nombre: 'J.RODRÍGUEZ', numero: 10, posicion: 'medio-ofensivo', imagen: "https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j_rodriguez.png"},
+  { nombre: 'J.ARIAS', numero: 11, posicion: 'medio-ofensivo', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j.arias.png'},
+  { nombre: 'L.DÍAZ', numero: 7, posicion: 'medio-ofensivo', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/l_diaz.png'},
+  { nombre: 'J.CÓRDOBA', numero: 24, posicion: 'delantero', imagen: 'https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j_cordoba.png'},
+];
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/fondo_index.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .header {
+    text-align: center;
+    padding: 15px;
+    background: url(img/image1.png) no-repeat center center;
+    background-size: cover;
+    color: #FFD700;
+    font-size: 26px;
+    text-shadow: 
+      -1px -1px 0 black,  
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+  }
+
+  main {
+    margin-top: 200px; /* Ajusta este valor según la altura del header */
+  }
+
+  .player-selection {
+    background-color: #004488;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 20px;
+    text-shadow: 
+      -1px -1px 0 black,  
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+  }
+
+  .cancha {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/image.cancha.png') no-repeat center center;
+    background-size: cover;
+    width: 80%;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    border: 5px solid #004488;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .lineas-cancha {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("img/image.cancha.png") no-repeat center center;
+    background-size: contain;
+  }
+
+  .jugador {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    width: 130px;
+    height: 130px;
+    text-shadow: 
+      -1px -1px 0px black,  
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black,
+      0 0 5px black;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .jugador img {
+    display: none;
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+
+  .jugador:hover img {
+    display: block;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  .jugador a {
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .jugador a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  /* Posiciones de los jugadores */
+  .portero { top: 90%; left: 52%; transform: translateX(-50%); }
+  .defensa:nth-of-type(6) { top: 60%; left: 15%; }
+  .defensa:nth-of-type(3) { top: 67%; left: 35%; }
+  .defensa:nth-of-type(4) { top: 67%; left: 60%; }
+  .defensa:nth-of-type(5) { top: 60%; left: 78%; }
+  .medio-defensivo:nth-of-type(8) { top: 50%; left: 35%; }
+  .medio-defensivo:nth-of-type(7) { top: 50%; left: 55%; }
+  .medio-ofensivo:nth-of-type(11) { top: 30%; left: 20%; }
+  .medio-ofensivo:nth-of-type(9) { top: 38%; left: 43%; }
+  .medio-ofensivo:nth-of-type(10) { top: 30%; left: 74%; }
+  .delantero { top: 20%; left: 50%; transform: translateX(-50%); }
+
+  .contenedor {
+    width: 66%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    flex: 1;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 5px;
+    background: url("img/image2.jpeg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 40px;
+    position: relative;
+  }
+</style>
+
+<Layout title="Agenda">
+  <main class="relative overflow-hidden" data-view-transition="hero">
+    <Header />
+    <div class="contenedor">  
+      <div class="player-selection">
+        Selecciona un jugador
+      </div>
+      <div class="cancha">
+        <div class="lineas-cancha"></div>
+        {jugadores.map((jugador, index) => (
+          <div class={`jugador ${jugador.posicion}`}>
+            <a 
+              href={`/${jugador.nombre.toLowerCase().replace(/\./g, '')}`} 
+              style={{ color: 'white', textDecoration: 'none' }} 
+              data-view-transition="hero"
+            >
+              <span>{jugador.nombre} ({jugador.numero})</span>
+            </a>
+            <img src={jugador.imagen} alt={jugador.nombre} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout> 
+
+<Layout title="Agenda">
+  <main class="relative overflow-hidden" data-view-transition="hero">
+    <Header />
+    <div class="contenedor">  
+      <!-- Sección de porteros -->
+      <div class="seccion-porteros">
+        <h1>Porteros</h1>
+        <div class="porteros-container">
+          {jugadores.filter(jugador => jugador.posicion === 'portero').map((jugador, index) => (
+            <div class="card-portero">
+              <img src={jugador.imagen} alt={jugador.nombre} />
+              <div class="info-portero">
+                <h2>{jugador.nombre}</h2>
+                <p class={`estado ${jugador.titular ? 'titular' : 'suplente'}`}>
+                  {jugador.titular ? 'Titular' : 'Suplente'}
+                </p>
+                <button class="btn">Ver detalles</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Fondo desaturado debajo -->
+      <div class="fondo-desaturado">
+        <p>Aquí puedes agregar más contenido o dejarlo como fondo decorativo.</p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Contenedor principal */
+  .contenedor {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  /* Estilos de la sección de porteros */
+  .seccion-porteros {
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .porteros-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card-portero {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-portero img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .info-portero {
+    margin-top: 10px;
+  }
+
+  .info-portero h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .estado {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .titular {
+    color: green;
+  }
+
+  .suplente {
+    color: red;
+  }
+
+  .btn {
+    background-color: #004488;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #003366;
+  }
+
+  /* Sección de fondo desaturado en negro */
+  .fondo-desaturado {
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente negro */
+    background-blend-mode: saturation;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    margin-top: 20px; /* Espacio encima del fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 
+      -1px -1px 0 black,  
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+    font-size: 20px;
+  }
+</style>

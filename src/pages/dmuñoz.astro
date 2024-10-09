@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Daniel Muñoz, nacido el 25 de mayo de 1996 en Amalfi, Antioquia, es un destacado futbolista colombiano que se desempeña como lateral derecho o defensa central. Actualmente juega para el Crystal Palace F.C. en la Premier League de Inglaterra y es un miembro clave de la Selección Colombia. Su trayectoria en el fútbol profesional ha sido notable, comenzando su carrera en Águilas Doradas y pasando por Atlético Nacional y K.R.C. Genk antes de llegar a la liga inglesa.
+        </p>
+        <br><br>
+        <p>
+          Muñoz debutó profesionalmente en 2017 con Águilas Doradas, donde rápidamente se destacó por su habilidad defensiva y su capacidad para unirse al ataque. Su desempeño llamó la atención de Atlético Nacional, uno de los clubes más importantes de Colombia, donde se unió en 2019. En Nacional, no solo se consolidó como titular, sino que también se ganó el cariño de la afición, especialmente por su gol número 5000 en la historia del club, anotado en un tiempo récord de 22 segundos.
+        </p>
+        <p>
+          En 2020, Muñoz dio el salto al fútbol europeo al unirse al K.R.C. Genk de Bélgica. Durante su tiempo en Genk, continuó demostrando su valía, ayudando al equipo a ganar la Copa de Bélgica en la temporada 2020-2021. Su rendimiento en Europa no pasó desapercibido, y en 2024, Crystal Palace lo fichó para reforzar su defensa en la Premier League. Su adaptación al fútbol inglés ha sido impresionante, consolidándose como un jugador fiable y versátil.
+        </p>
+        <br><br>
+        <p>
+          En la Selección Colombia, Muñoz debutó el 3 de junio de 2021 y desde entonces ha sido una pieza fundamental en la defensa del equipo nacional. Ha participado en importantes torneos como la Copa América 2021, donde Colombia obtuvo la medalla de bronce, y los Juegos Olímpicos de 2024, donde el equipo ganó la medalla de plata. Su capacidad para desempeñarse en múltiples posiciones defensivas lo convierte en un recurso valioso para el entrenador Néstor Lorenzo.
+        </p>
+        <p>
+          A pesar de su éxito, Muñoz ha enfrentado desafíos significativos a lo largo de su carrera. Recientemente, sufrió una lesión muscular que lo dejó fuera de los partidos de eliminatoria para el Mundial, lo que fue un golpe tanto para él como para la Selección Colombia. Sin embargo, su determinación y espíritu de lucha sugieren que pronto estará de vuelta en el campo, listo para seguir contribuyendo a su equipo.
+        </p>
+        <br><br>
+        <p>
+          La historia de Daniel Muñoz es también una de perseverancia y superación personal. Antes de convertirse en profesional, fue un ferviente hincha y miembro de la barra Los Del Sur de Atlético Nacional. Su amor por el fútbol y su dedicación lo llevaron a superar numerosos obstáculos, incluyendo la falta de oportunidades en sus primeros años. Su resiliencia es un testimonio de su carácter y pasión por el deporte.
+        </p>
+        <p>
+          Muñoz es conocido por su estilo de juego agresivo y su capacidad para leer el juego, lo que le permite anticipar las jugadas del rival y realizar intercepciones cruciales. Además, su habilidad para unirse al ataque y contribuir con goles y asistencias lo hace un jugador completo. Su liderazgo en el campo es evidente, habiendo sido capitán en varios equipos a lo largo de su carrera.
+        </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/d_mu%C3%B1oz.png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Genk.png" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/i.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

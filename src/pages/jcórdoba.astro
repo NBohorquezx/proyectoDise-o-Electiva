@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Jhon Andrés Córdoba Copete, nacido el 11 de mayo de 1993 en Istmina, Chocó, es un destacado futbolista colombiano que se desempeña como delantero. Actualmente, juega para el FC Krasnodar en la Liga Premier de Rusia. Su carrera ha sido notable tanto a nivel de clubes como en la selección nacional de Colombia.
+        </p>
+        <br><br>
+        <p>
+          Córdoba comenzó su carrera profesional en el Envigado F.C., donde debutó en 2010. Su talento y capacidad goleadora rápidamente llamaron la atención, lo que le permitió dar el salto al fútbol internacional. En 2012, se unió a los Jaguares de Chiapas en México, donde continuó demostrando su valía como delantero.
+        </p>
+        <p>
+          Después de su paso por México, Córdoba se trasladó a Europa, donde jugó para varios clubes en España y Alemania. En España, tuvo estancias en el RCD Espanyol y el Granada CF, mientras que en Alemania jugó para el 1. FSV Mainz 05 y el FC Colonia. Su tiempo en Europa fue crucial para su desarrollo, enfrentándose a algunos de los mejores defensores del mundo y perfeccionando su juego.
+        </p>
+        <br><br>
+        <p>
+          En 2020, Córdoba se unió al Hertha Berlín en la Bundesliga, donde tuvo una temporada destacada antes de trasladarse al FC Krasnodar en 2021. En Rusia, ha continuado mostrando su capacidad goleadora, convirtiéndose en una pieza clave para su equipo. Su rendimiento en el FC Krasnodar ha sido impresionante, lo que le ha valido el reconocimiento tanto a nivel nacional como internacional.        </p>
+        <p>
+          A nivel internacional, Jhon Córdoba ha sido un miembro regular de la selección colombiana desde su debut en 2023. Su participación en la Copa América 2024 fue particularmente destacada, donde jugó un papel crucial en el ataque colombiano, ayudando a su equipo a alcanzar la final y obtener la medalla de plata. Su capacidad para marcar goles en momentos decisivos lo ha convertido en un jugador indispensable para la selección.        </p>
+        <br><br>
+        <p>
+          Córdoba es conocido por su fuerza física, velocidad y capacidad para finalizar jugadas. Estas habilidades lo han convertido en un delantero temido por las defensas rivales. Su capacidad para adaptarse a diferentes estilos de juego y su experiencia en ligas competitivas lo han consolidado como uno de los mejores delanteros de Colombia
+        </p>
+        <p>
+          En 2024, después de una destacada actuación en la Copa América, Córdoba firmó una extensión de contrato con el FC Krasnodar hasta 2025. Este movimiento fue visto como un paso importante en su carrera, ya que le permite continuar jugando en una de las ligas más competitivas del mundo y seguir desarrollándose como jugador.
+        </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j_cordoba.png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Krasnodar.png" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Russian_Premier_League.svg.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Johan Andrés Mojica Palacio, nacido el 21 de agosto de 1992 en Palmira, Valle del Cauca, es un destacado futbolista colombiano que se desempeña como lateral izquierdo. Actualmente, juega para el RCD Mallorca en la Primera División de España. Su carrera ha sido notable tanto a nivel de clubes como en la selección nacional de Colombia.
+        </p>
+        <p>
+          Mojica comenzó su carrera profesional en el Academia Fútbol Club y luego pasó a Llaneros en la Segunda División de Colombia. Su talento y velocidad lo llevaron a unirse al Deportivo Cali en 2013, donde se consolidó como lateral izquierdo1. Su desempeño en el Deportivo Cali llamó la atención del Rayo Vallecano de España, que lo fichó inicialmente en calidad de cedido para la temporada 2013-2014.
+        </p>
+        <br><br>
+        <p>
+          En España, Mojica ha tenido una carrera variada, jugando para varios equipos. Después de su cesión al Rayo Vallecano, fue fichado permanentemente y luego cedido al Real Valladolid. También tuvo un breve paso por el Girona FC y el Villarreal CF antes de unirse al RCD Mallorca en 2024. Su experiencia en la liga española ha sido fundamental para su desarrollo como jugador, permitiéndole enfrentar a algunos de los mejores equipos y jugadores del mundo.
+        </p>
+        <p>
+          A nivel internacional, Johan Mojica ha sido un miembro regular de la selección colombiana desde su debut en 2015. Su participación en la Copa Mundial de la FIFA 2018 en Rusia fue particularmente destacada, donde jugó un papel crucial en la defensa colombiana, ayudando a su equipo a alcanzar los octavos de final. Además, ha participado en varias ediciones de la Copa América, siendo una figura clave en la edición de 2024, donde Colombia obtuvo la medalla de plata.
+        </p>
+        <br><br>
+        <p>
+          Mojica es conocido por su velocidad, resistencia y capacidad para unirse al ataque desde su posición defensiva. Estas habilidades lo han convertido en un jugador versátil y valioso tanto para sus clubes como para la selección nacional. Su capacidad para adaptarse a diferentes estilos de juego y su experiencia en ligas competitivas lo han consolidado como uno de los mejores laterales izquierdos de Colombia.
+        </p>
+
+        <p>
+          En 2024, después de una destacada actuación en la Copa América, Mojica firmó un contrato con el RCD Mallorca hasta 20274. Este movimiento fue visto como un paso importante en su carrera, ya que le permite continuar jugando en una de las ligas más competitivas del mundo y seguir desarrollándose como jugador.
+        </p>
+        <p>
+          Además de su carrera en el fútbol de clubes, Mojica ha sido un pilar en la defensa de la selección colombiana. Su experiencia y liderazgo en el campo han sido vitales para el equipo, especialmente en torneos internacionales. Su dedicación y profesionalismo lo han convertido en un modelo a seguir para los jóvenes futbolistas colombianos.
+        </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/j_mojica.png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Villarreal%20CF.png" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="img/LaLiga.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

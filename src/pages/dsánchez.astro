@@ -1,0 +1,140 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Dávinson Sánchez Quintero, nacido el 12 de junio de 1996 en Caloto, Cauca, es un destacado defensa central colombiano que ha dejado una huella significativa tanto en su carrera de clubes como en la Selección Colombia. Su trayectoria profesional comenzó en Atlético Nacional, donde debutó en 2013 y rápidamente se consolidó como uno de los defensores más prometedores del país. Con Nacional, Sánchez ganó la Copa Libertadores en 2016, un logro que catapultó su carrera internacional.        </p>
+        <br><br>
+        <p>
+          En 2016, Dávinson se unió al Ajax de Ámsterdam, donde tuvo una temporada impresionante que culminó con su participación en la final de la UEFA Europa League. Su desempeño en el Ajax le valió el trofeo Rinus Michels como el mejor jugador del equipo en la Eredivisie 2016-17. Este éxito llamó la atención del Tottenham Hotspur, que lo fichó en 2017 por una cifra récord para un defensor colombiano.        </p>
+        <p>
+          Durante su tiempo en Tottenham, Sánchez se estableció como un pilar en la defensa del equipo, participando en competiciones de alto nivel como la Premier League y la UEFA Champions League. Su solidez defensiva y capacidad para leer el juego lo convirtieron en un jugador clave para los Spurs. En 2023, Dávinson se trasladó al Galatasaray de Turquía, donde continúa demostrando su valía en la Superliga turca.
+
+        </p>
+        <br><br>
+        <p>
+          En cuanto a su carrera internacional, Dávinson debutó con la Selección Colombia en noviembre de 2016 en un partido de clasificación para el Mundial contra Argentina. Desde entonces, ha sido una presencia constante en la defensa colombiana, participando en torneos importantes como la Copa América y las eliminatorias para la Copa del Mundo. Su liderazgo y experiencia han sido fundamentales para el equipo nacional.
+
+        </p>
+        <p>
+          Uno de los momentos más destacados de Sánchez con la selección fue durante la Copa América 2024, donde Colombia llegó a la final. En las semifinales contra Uruguay, Dávinson fue una de las figuras del partido, demostrando su capacidad para competir bajo presión y su habilidad para liderar la defensa en situaciones críticas. Aunque Colombia no ganó el torneo, su desempeño fue ampliamente elogiado.
+
+        </p>
+        <br><br>
+        <p>
+          A lo largo de su carrera, Dávinson ha enfrentado desafíos, incluyendo lesiones y la competencia por un lugar en el equipo titular. Sin embargo, su determinación y profesionalismo le han permitido superar estos obstáculos y seguir siendo un jugador clave tanto para su club como para la selección. Su capacidad para adaptarse a diferentes estilos de juego y su compromiso con el equipo son cualidades que lo distinguen.
+
+        </p>
+        <p>
+          Recientemente, Sánchez ha sido desconvocado de la selección debido a una suspensión, lo que subraya la importancia de su presencia en el equipo. A pesar de esta ausencia temporal, su influencia en la selección es indiscutible, y se espera que regrese pronto para continuar contribuyendo al éxito del equipo nacional.
+
+        </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/d.sanchez.png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Galatasaray.png" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/S%C3%BCper_Lig_logo.svg.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

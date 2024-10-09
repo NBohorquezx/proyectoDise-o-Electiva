@@ -1,0 +1,136 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Luis Fernando Díaz Marulanda, nacido el 13 de enero de 1997 en Barrancas, La Guajira, es uno de los futbolistas colombianos más destacados de la actualidad. Su carrera comenzó en el humilde equipo de Barranquilla FC, donde rápidamente llamó la atención por su velocidad, habilidad en el regate y capacidad para marcar goles. Su talento no pasó desapercibido y pronto fue fichado por el Junior de Barranquilla, uno de los clubes más importantes de Colombia.
+        </p>
+        <p>
+          En el Junior, Díaz se consolidó como una estrella emergente. Contribuyó significativamente a los éxitos del equipo, incluyendo la conquista de la Liga Águila y la Copa Colombia. Su desempeño en el Junior le valió una convocatoria a la selección nacional de Colombia, donde debutó en 2018. Desde entonces, ha sido una pieza clave en el equipo nacional, participando en torneos importantes como la Copa América y las eliminatorias para el Mundial.
+        </p>
+        <p>
+          El gran salto en la carrera de Luis Díaz llegó en 2019 cuando fue fichado por el FC Porto de Portugal. En el Porto, Díaz no solo se adaptó rápidamente al fútbol europeo, sino que también se convirtió en uno de los jugadores más importantes del equipo. Su habilidad para desbordar por las bandas, su precisión en los tiros y su capacidad para asistir a sus compañeros lo hicieron destacar en la Primeira Liga y en competiciones europeas como la UEFA Champions League.
+        </p>
+        <br><br>
+        <p>
+          En 2022, Díaz dio otro gran paso en su carrera al unirse al Liverpool FC de la Premier League inglesa. Su llegada a Liverpool fue recibida con gran entusiasmo por los aficionados y el cuerpo técnico. En su primera temporada, Díaz demostró ser un jugador crucial para el equipo, ayudando a Liverpool a ganar la FA Cup y la Carabao Cup, y llegando a la final de la Champions League. Su impacto en el equipo fue inmediato, y rápidamente se ganó un lugar en el once titular.
+        </p>
+        <p>
+          A nivel internacional, Luis Díaz ha sido una figura clave para la selección colombiana. En la Copa América 2021, fue uno de los máximos goleadores del torneo, ayudando a Colombia a alcanzar las semifinales. Su desempeño en la Copa América le valió el reconocimiento como uno de los mejores jugadores del torneo, consolidando su reputación a nivel mundial.
+        </p>
+        <br><br>
+        <p>
+          Además de sus logros en el campo, Díaz es conocido por su humildad y dedicación. A pesar de su éxito, sigue siendo un jugador trabajador y comprometido con su equipo y su país. Su ética de trabajo y su actitud positiva lo han convertido en un modelo a seguir para los jóvenes futbolistas en Colombia y en todo el mundo.
+        </p>
+        <p>
+          En 2023, Díaz continuó brillando con Liverpool, ayudando al equipo a ganar la Premier League y siendo nombrado en el equipo del año de la liga. Su capacidad para influir en los partidos importantes y su consistencia a lo largo de la temporada lo han consolidado como uno de los mejores extremos del mundo.      
+       </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/l_diaz.png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Liverpool%20(1).png" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/premier-league-logo-C13B9DEC31-seeklogo.com.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

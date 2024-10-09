@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .texto {
+    grid-column: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .foto {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+  }
+
+  .equipos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .equipos .equipo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .equipos .equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <main>
+    <div class="contenedor">
+      <!-- Sección de Texto -->
+      <div class="texto">
+        <h1>Bienvenido a la Nueva Pestaña</h1>
+        <p>
+          Camilo Andrés Vargas Gil, nacido el 9 de marzo de 1989 en Bogotá, es un destacado arquero colombiano que ha tenido una carrera notable tanto en clubes como en la Selección Colombia. Su trayectoria profesional comenzó en Independiente Santa Fe, donde debutó en 2007. Desde sus primeros años, Vargas mostró un gran potencial, ganando la Copa Colombia en 2009 y siendo una figura clave en la obtención del título del Torneo Apertura en 2012, que puso fin a una sequía de 36 años sin títulos de liga para el club.
+        </p>
+        <br><br>
+        <p>
+          En 2015, Vargas se unió a Atlético Nacional, donde continuó su éxito al ganar la Superliga Colombiana y la Copa Libertadores en 2016. Su desempeño en Nacional le permitió dar el salto al fútbol internacional, uniéndose brevemente a Argentinos Juniors en 2016 antes de regresar a Colombia con Deportivo Cali. En 2019, Vargas se trasladó a México para unirse al Atlas FC, donde ha sido una pieza fundamental en la defensa del equipo.
+        </p>
+        <p>
+          Con la Selección Colombia, Camilo Vargas debutó en mayo de 2014 en un amistoso contra Senegal. Aunque inicialmente fue suplente de David Ospina, Vargas ha demostrado ser un arquero confiable y ha ganado su lugar como titular en varias ocasiones. Ha participado en importantes torneos internacionales, incluyendo la Copa América y las eliminatorias para la Copa del Mundo. Su experiencia y liderazgo han sido vitales para el equipo nacional.
+        </p>
+        <br><br>
+        <p>
+          Uno de los momentos más destacados de Vargas con la selección fue durante la Copa América 2024, donde Colombia llegó a la final. Su actuación en el torneo fue crucial, especialmente en las semifinales contra Uruguay, donde realizó varias atajadas decisivas que aseguraron la victoria de su equipo. Aunque Colombia no ganó la final, el desempeño de Vargas fue ampliamente elogiado y consolidó su reputación como uno de los mejores arqueros de la región.
+        </p>
+        <p>
+          A lo largo de su carrera, Vargas ha demostrado una gran resiliencia y capacidad para superar desafíos. Ha tenido que competir con otros talentosos arqueros por un lugar en el equipo titular, pero su dedicación y profesionalismo le han permitido mantenerse en la élite del fútbol colombiano e internacional. Su capacidad para mantener la calma bajo presión y su habilidad para realizar atajadas espectaculares lo han convertido en un favorito de los aficionados.
+        </p>
+        <br><br>
+        <p>
+          En el Atlas FC, Vargas ha sido un líder tanto dentro como fuera del campo. Su experiencia y habilidades han sido fundamentales para el equipo, y ha ayudado a Atlas a competir en la Liga MX con consistencia. Además, ha sido reconocido por su capacidad para detener penales, lo que ha sido un recurso valioso en momentos críticos de los partidos.
+        </p>
+        <p>
+          Recientemente, Vargas ha enfrentado algunos desafíos, incluyendo una expulsión en un partido de eliminatorias que lo dejó fuera de la convocatoria de la selección temporalmente. Sin embargo, su influencia en el equipo es indiscutible, y se espera que regrese pronto para continuar contribuyendo al éxito de la Selección Colombia. Su ausencia ha resaltado aún más su importancia para el equipo.
+        </p>
+        <!-- Más texto si es necesario -->
+      </div>
+
+      <!-- Sección de Foto -->
+      <div class="foto">
+        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/camilo_vargas.png" alt="Foto del jugador" />
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="equipos">
+        <div class="equipo">
+          <a href="equipo">
+            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/atlas.png" alt="Equipo 1" />
+          </a>
+          
+        </div>
+        <div class="equipo">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/MX_logo.png" alt="Equipo 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>

@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+}
+import { ViewTransitions } from 'astro:transitions';
+import Header from "../components/Header.astro";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <Header>
+    <ViewTransitions />
+    <style>
+      /* Efecto de fondo y animación */
+      body {
+        transition: background-color 0.5s ease, color 0.5s ease; /* Transiciones suaves para el fondo y el texto */
+      }
+      
+      main {
+        opacity: 1; /* Asegúrate de que el contenido tenga opacidad */
+        transition: opacity 0.5s ease; /* Transición de opacidad */
+      }
+
+      /* Efecto durante la transición */
+      main[data-view-transition-enter] {
+        opacity: 0; /* Desvanecer al entrar */
+      }
+      
+      main[data-view-transition-leave] {
+        opacity: 0; /* Desvanecer al salir */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
