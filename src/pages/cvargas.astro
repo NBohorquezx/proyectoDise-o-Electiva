@@ -14,8 +14,8 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .contenedor {
-    width: 66%;
-    margin: 20px auto;
+    width: 96%;
+    margin: 130px auto;
     background-color: rgba(0, 0, 0, 0.7);
     border: 5px solid #004488;
     border-radius: 10px;
@@ -23,9 +23,9 @@ import Layout from "../layouts/Layout.astro";
     position: relative;
     padding: 20px;
     flex: 1;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     grid-gap: 20px;
   }
 
@@ -34,6 +34,8 @@ import Layout from "../layouts/Layout.astro";
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 40px;
+    overflow-y: auto; /* Agregar scroll vertical */
+    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
   }
 
   .foto {
@@ -41,17 +43,17 @@ import Layout from "../layouts/Layout.astro";
     grid-row: 1 / 2;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75%; /* Asegura que el contenedor ocupe toda la altura asignada */
+    height: 75%;
   }
 
   .foto img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+    object-fit: cover;
   }
 
   .equipos {
@@ -59,30 +61,29 @@ import Layout from "../layouts/Layout.astro";
     grid-row: 2 / 3;
     display: flex;
     gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .equipos .equipo {
     flex: 1;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 100px;
   }
 
   .equipos .equipo img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+    margin: auto;
   }
 </style>
 
 <Layout title="Nueva Pestaña">
   <main>
     <div class="contenedor">
-      <!-- Sección de Texto -->
       <div class="texto">
         <h1>Bienvenido a la Nueva Pestaña</h1>
         <p>
@@ -109,24 +110,20 @@ import Layout from "../layouts/Layout.astro";
         <p>
           Recientemente, Vargas ha enfrentado algunos desafíos, incluyendo una expulsión en un partido de eliminatorias que lo dejó fuera de la convocatoria de la selección temporalmente. Sin embargo, su influencia en el equipo es indiscutible, y se espera que regrese pronto para continuar contribuyendo al éxito de la Selección Colombia. Su ausencia ha resaltado aún más su importancia para el equipo.
         </p>
-        <!-- Más texto si es necesario -->
       </div>
 
-      <!-- Sección de Foto -->
-      <div class="foto">
-        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/camilo_vargas.png" alt="Foto del jugador" />
-      </div>
-
-      <!-- Sección de Equipos -->
-      <div class="equipos">
-        <div class="equipo">
-          <a href="atlas">
-            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/atlas.png" alt="atlas" />
-          </a>
-          
+      <!-- Sección de Foto y Equipos, debajo del texto -->
+      <div>
+        <div class="foto">
+          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/camilo_vargas.png" alt="Foto del jugador" />
         </div>
-        <div class="equipo">
-          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/MX_logo.png" alt="Equipo 2" />
+
+        <div class="equipos">
+          <div class="equipo">
+            <a href="atlas">
+              <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/atlas.png" alt="atlas" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -135,3 +132,4 @@ import Layout from "../layouts/Layout.astro";
     <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
   </footer>
 </Layout>
+
