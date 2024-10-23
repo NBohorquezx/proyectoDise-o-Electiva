@@ -3,134 +3,158 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <style>
-  body {
+    body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background: url(https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/fondo_index.png) no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: space-between;
   }
 
   .contenedor {
-    width: 66%;
-    margin: 20px auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 5px solid #004488;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    padding: 20px;
-    flex: 1;
-    padding-bottom: 10px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    width: 100%;
+    max-width: 1200px;
   }
 
-  .texto {
-    grid-column: 1 / 2;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 40px;
+  h1 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
   }
 
-  .foto {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+  .equipo-atlas {
+    width: 300px;
+    height: 300px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55%; /* Asegura que el contenedor ocupe toda la altura asignada */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 5px solid #004488;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
-  .foto img {
+  .equipo-atlas img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
   }
 
   .equipos {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
   }
 
-  .equipos .equipo {
-    flex: 1;
+  .equipo {
+    width: 150px;
+    height: 150px;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    border: 2px solid #004488;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
-  .equipos .equipo img {
+  .equipo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 5px;
   }
+
+  .texto {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;           
+  max-width: 900px;       
+  height: 400px;          
+  overflow-y: auto;       
+  box-shadow: 0 0 10px rgba(255, 250, 250, 0.5);
+  text-align: justify;
+}
+
 </style>
 
 <Layout title="Nueva Pestaña">
   <main>
     <div class="contenedor">
-      <!-- Sección de Texto -->
-      <div class="texto">
-        <h1>Bienvenido a la Nueva Pestaña</h1>
-        <p>
-          Richard Ríos Montoya, nacido el 2 de junio de 2000 en Medellín, Colombia, es un talentoso futbolista que ha captado la atención tanto a nivel nacional como internacional. Comenzó su carrera en las divisiones inferiores del Atlético Nacional, uno de los clubes más importantes de Colombia. Desde joven, Ríos mostró un gran potencial, destacándose por su habilidad técnica, visión de juego y capacidad para marcar goles desde el mediocampo.
-        </p>
-        <br><br>
-        <p>
-          En 2019, Ríos fue promovido al primer equipo de Atlético Nacional, donde tuvo la oportunidad de debutar en la liga profesional colombiana. Su desempeño en el campo no pasó desapercibido, y pronto se convirtió en una pieza clave del equipo. Su habilidad para controlar el ritmo del juego y su precisión en los pases lo hicieron destacar entre sus compañeros y rivales.
-        </p>
-        <p>
-          El talento de Richard Ríos no se limitó a su club. En 2021, fue convocado a la selección sub-20 de Colombia, donde jugó un papel crucial en el Campeonato Sudamericano Sub-20. Su desempeño en el torneo fue impresionante, ayudando a Colombia a alcanzar las etapas finales y ganándose el reconocimiento como uno de los mejores mediocampistas jóvenes del continente.
-        </p>
-        <br><br>
-        <p>
-          En 2022, Ríos dio el salto al fútbol internacional al unirse al Palmeiras de Brasil, uno de los clubes más prestigiosos de América del Sur. Su adaptación al fútbol brasileño fue rápida, y pronto se convirtió en un jugador importante para el equipo. Con Palmeiras, Ríos ha ganado varios títulos, incluyendo el Campeonato Brasileño y la Copa Libertadores, consolidando su reputación como un mediocampista de clase mundial.
-        </p>
-        <p>
-          A nivel internacional, Richard Ríos ha comenzado a dejar su huella en la selección mayor de Colombia. Debutó en 2023 en un amistoso contra México, y desde entonces ha sido convocado regularmente para las eliminatorias del Mundial de 2026. Su capacidad para influir en el juego desde el mediocampo y su habilidad para marcar goles importantes lo han convertido en un jugador valioso para el equipo nacional.
-        </p>
-        <br><br>
-        <p>
-          Además de sus logros en el campo, Ríos es conocido por su dedicación y ética de trabajo. Fuera del campo, es un ejemplo de profesionalismo y humildad, siempre dispuesto a aprender y mejorar. Su actitud positiva y su compromiso con el equipo lo han convertido en un líder tanto dentro como fuera del campo.
-        </p>
-        <p>
-          En 2024, Ríos fue parte del equipo de Palmeiras que ganó la Recopa Sudamericana, añadiendo otro título importante a su ya impresionante palmarés. Su desempeño en el torneo fue destacado, y fue nombrado el mejor jugador del partido en la final. Este reconocimiento subraya su importancia para el equipo y su capacidad para rendir en los momentos más cruciales.
-        </p>
-        <!-- Más texto si es necesario -->
-      </div>
 
-      <!-- Sección de Foto -->
-      <div class="foto">
-        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Fluminense%20(1).png" alt="Foto del jugador" />
-      </div>
+      <h1>FLUMINENSE F.C </h1>
 
-      <!-- Sección de Equipos -->
+
+      <div class="equipo-atlas">
+        <a href="fluminense">
+          <img
+            src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Fluminense%20(1).png"
+            alt="fluminense"
+          />
+        </a>
+      </div>
       <div class="equipos">
         <div class="equipo">
           <a href="equipo">
-            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/audaz-vibrante-bandera-brasilena-movimiento_1026943-555.jpg" alt="Equipo 1" />
+            <img
+              src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/audaz-vibrante-bandera-brasilena-movimiento_1026943-555.jpg"
+              alt="Equipo 1"
+            />
           </a>
-          
         </div>
         <div class="equipo">
           <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Campeonato-Brasileiro-S%C3%A9rie-A-logo.png" alt="Equipo 2" />
         </div>
       </div>
+
+
+      <div class="texto">
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Fundación y Primeros Años (1902-1920)
+        </h1>        
+        <p>
+          El Fluminense Football Club fue fundado el 21 de julio de 1902 por Oscar Cox con el objetivo de difundir el fútbol en Brasil. En 1906, se proclamó campeón del primer Campeonato Carioca, lo que marcó el inicio de su relevancia en el fútbol brasileño. Durante sus primeras décadas, el club aportó jugadores clave a la selección nacional, destacando Preguinho, quien anotó el primer gol de Brasil en una Copa del Mundo.
+        </p>
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Décadas de 1940 y 1950: Era Dorada
+        </h1>        
+        <p>
+          Durante estas décadas, Fluminense vivió una etapa de gloria al conquistar múltiples títulos del Campeonato Carioca. En 1952, ganó la Copa Rio, un torneo intercontinental que algunos consideran un precursor no oficial del Mundial de Clubes. Estos logros consolidaron al club como una potencia nacional e internacional.
+        </p>
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Décadas de 1970 y 1980: La "Máquina Tricolor"
+        </h1>        
+        <p>
+          En los años 70, Fluminense formó un equipo histórico conocido como la "Máquina Tricolor", compuesto por estrellas como Rivellino y Paulo César Caju. Esta generación ganó varios campeonatos estatales y la primera versión oficial del Campeonato Brasileño en 1970. En 1984, bajo la dirección técnica de Carlos Alberto Parreira, el club volvió a brillar al ganar otro Brasileirão, liderado por jugadores como Romerito y Assis.
+        </p>
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Décadas de 1990 y 2000: Altibajos y Resurgimiento
+        </h1>        
+        <p>
+          A pesar de haber descendido en los años 90, el Fluminense resurgió en los 2000 con logros importantes. En 2007, conquistó la Copa de Brasil, y en 2008 llegó a la final de la Copa Libertadores. Además, fue campeón del Brasileirão en 2010 y 2012, con figuras destacadas como Fred y Deco.
+        </p>       
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Últimos Años y Desarrollo de Talento Joven
+        </h1>        
+        <p>
+          En los años recientes, el club se ha enfocado en desarrollar jóvenes talentos, lanzando las carreras de jugadores como Richarlison y Pedro. A pesar de enfrentar desafíos financieros, Fluminense ha seguido siendo competitivo, logrando el Campeonato Carioca en 2022 y renovando la pasión de sus seguidores.
+        </p>      
+
+      </div>
     </div>
   </main>
+
   <footer class="footer">
     <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
   </footer>

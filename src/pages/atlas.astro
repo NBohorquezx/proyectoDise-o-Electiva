@@ -3,134 +3,157 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <style>
-  body {
+    body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background: url(https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/fondo_index.png) no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: space-between;
   }
 
   .contenedor {
-    width: 66%;
-    margin: 20px auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 5px solid #004488;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    padding: 20px;
-    flex: 1;
-    padding-bottom: 10px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    width: 100%;
+    max-width: 1200px;
   }
 
-  .texto {
-    grid-column: 1 / 2;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 40px;
+  h1 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
   }
 
-  .foto {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+  .equipo-atlas {
+    width: 300px;
+    height: 300px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    overflow: hidden; /* Importante para que la imagen no sobresalga del contenedor */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55%; /* Asegura que el contenedor ocupe toda la altura asignada */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 5px solid #004488;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
-  .foto img {
+  .equipo-atlas img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
   }
 
   .equipos {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
   }
 
-  .equipos .equipo {
-    flex: 1;
+  .equipo {
+    width: 150px;
+    height: 150px;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    border: 2px solid #004488;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
-  .equipos .equipo img {
+  .equipo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 5px;
   }
+
+  .texto {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;           
+  max-width: 900px;       
+  height: 400px;          
+  overflow-y: auto;       
+  box-shadow: 0 0 10px rgba(255, 250, 250, 0.5);
+  text-align: justify;
+}
+
 </style>
 
 <Layout title="Nueva Pestaña">
   <main>
     <div class="contenedor">
-      <!-- Sección de Texto -->
-      <div class="texto">
-        <h1>Bienvenido a la Nueva Pestaña</h1>
-        <p>
-          Atlas Fútbol Club, conocido popularmente como Atlas, es un equipo de fútbol profesional con sede en Guadalajara, Jalisco, México. Fundado el 15 de agosto de 1916, Atlas es uno de los clubes más antiguos y tradicionales del fútbol mexicano. Sus colores distintivos son el rojo y el negro, y sus apodos incluyen “Los Rojinegros” y “Los Zorros”. El equipo juega sus partidos de local en el Estadio Jalisco, uno de los estadios más emblemáticos de México, con una capacidad para más de 55,000 espectadores.
-        </p>
-        <br><br>
-        <p>
-          La historia de Atlas está marcada por su dedicación a la formación de jóvenes talentos, lo que le ha valido el apodo de “La Academia”. A lo largo de los años, el club ha sido una cantera prolífica de jugadores que han destacado tanto a nivel nacional como internacional. Entre los futbolistas más notables que han surgido de Atlas se encuentran Rafael Márquez, Pavel Pardo y Andrés Guardado, quienes han tenido exitosas carreras en Europa y con la Selección Mexicana.
-        </p>
-        <p>
-          En cuanto a sus logros, Atlas ha ganado tres títulos de liga y cuatro Copas México. Su primer título de liga llegó en la temporada 1950-1951, un logro significativo que consolidó su posición en el fútbol mexicano. Sin embargo, el club experimentó una larga sequía de títulos de liga que duró más de 70 años, hasta que finalmente rompieron el maleficio al ganar el torneo Apertura 2021 y el Clausura 2022, convirtiéndose en bicampeones, un logro que pocos equipos han conseguido en la historia del fútbol mexicano.
-        </p>
-        <br><br>
-        <p>
-          Atlas también ha tenido una destacada participación en competiciones internacionales. En el año 2000, el equipo participó por primera vez en la Copa Libertadores, el torneo de clubes más prestigioso de América del Sur. Aunque no lograron ganar el título, su participación fue un hito importante para el club y demostró su capacidad para competir a nivel internacional.
-        </p>
-        <p>
-          El club mantiene una intensa rivalidad con el Club Deportivo Guadalajara, conocido como Chivas. Este enfrentamiento, conocido como el “Clásico Tapatío”, es uno de los derbis más antiguos y apasionados del fútbol mexicano. Los partidos entre Atlas y Chivas son eventos muy esperados que generan gran expectación y emoción entre los aficionados de ambos equipos.
-        </p>
-        <br><br>
-        <p>
-          En términos de administración, Atlas es propiedad de Grupo Orlegi, una empresa que también posee otros equipos de fútbol en México. Bajo la dirección de Grupo Orlegi, Atlas ha experimentado una revitalización tanto en términos deportivos como financieros. La gestión del club ha enfocado sus esfuerzos en fortalecer la cantera, mejorar las instalaciones y atraer talento tanto nacional como internacional.
-        </p>
-        <p>
-          El impacto de Atlas en la comunidad de Guadalajara y en el fútbol mexicano es significativo. El club no solo se dedica a la formación de futbolistas, sino que también participa en diversas iniciativas sociales y comunitarias. A través de su fundación, Atlas promueve el deporte y la educación entre los jóvenes, contribuyendo al desarrollo social y cultural de la región.
-        </p>
-        <!-- Más texto si es necesario -->
+
+      <h1>ATLAS F.C</h1>
+
+
+      <div class="equipo-atlas">
+        <a href="atlas">
+          <img
+            src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/atlas.png"
+            alt="atlas"
+          />
+        </a>
       </div>
 
-      <!-- Sección de Foto -->
-      <div class="foto">
-        <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/atlas%20(1).png" alt="Foto del jugador" />
-      </div>
 
-      <!-- Sección de Equipos -->
       <div class="equipos">
         <div class="equipo">
           <a href="equipo">
-            <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Flag_of_Mexico.jpg" alt="Equipo 1" />
+            <img
+              src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Flag_of_Mexico.jpg"
+              alt="Equipo 1"
+            />
           </a>
-          
         </div>
         <div class="equipo">
           <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/MX_logo.png" alt="Equipo 2" />
         </div>
       </div>
+
+
+      <div class="texto">
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Fundación y Origen
+        </h1>        
+        <p>
+          El Atlas F.C. fue fundado el 15 de agosto de 1916 en Guadalajara, Jalisco. El equipo surgió tras el regreso de un grupo de jóvenes que habían estudiado en Inglaterra y se enamoraron del fútbol. Estos fundadores se reunieron en el Café Rimans, donde oficializaron la creación del club. En sus primeros años, Atlas participó en campeonatos locales junto a otros equipos emblemáticos como el Guadalajara y el Colón, consolidando rápidamente su identidad en la región
+        </p>
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Éxitos en los Años Dorados
+        </h1>        
+        <p>
+          En la década de los 40, Atlas vivió su época más gloriosa. Ganó la Copa México en 1945 y se convirtió en el primer club de Jalisco en conquistar ese título. También levantó su primer trofeo de Campeón de Campeones en 1946. Sin embargo, su mayor logro llegó en la temporada 1950-51, cuando obtuvo su único campeonato de liga, derrotando al Club León con un gol decisivo de Edwin Cubero en un partido clave. Este período consolidó a Atlas como una institución importante en el fútbol mexicano
+        </p>
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Años Difíciles y Descensos
+        </h1>        
+        <p>
+          Pese a sus éxitos tempranos, el club vivió momentos difíciles. Sufrió su primer descenso en 1954 y luego volvió a la segunda división en 1971 y 1978. En las décadas posteriores, Atlas atravesó altibajos, con algunas temporadas brillantes pero sin conseguir títulos de liga adicionales. Aun así, se destacó por su cantera, formando jugadores como Rafael Márquez y Jared Borgetti​
+        </p>
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          Resurgimiento y Campeonatos Recientes
+        </h1>        
+        <p>
+          Después de un largo periodo sin títulos, Atlas experimentó un renacer futbolístico en 2021 y 2022, conquistando dos títulos consecutivos de la Liga MX, interrumpiendo así una sequía de 70 años sin campeonatos. Estos logros marcaron un hito para la institución y renovaron la pasión de su afición, conocida como "La Fiel", que siempre ha acompañado al club en sus buenos y malos momentos​
+        </p>       
+        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
+          ¡La historia del Atlas es un reflejo de perseverancia y amor al fútbol, con una mezcla de éxitos, caídas y un fuerte espíritu de lucha!
+        </h1>        
+
+      </div>
     </div>
   </main>
+
   <footer class="footer">
     <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
   </footer>
