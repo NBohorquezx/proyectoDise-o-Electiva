@@ -2,159 +2,126 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<style>
+<Layout title="Atlas F.C.">
+  <style>
     body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url(https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/fondo_index.png) no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-  }
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .resume {
+      background-color: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+    .logo, .about-club, .achievements, .identity {
+      background-color: #222;
+      border-radius: 5px;
+      padding: 15px;
+    }
+    .logo img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+    .ability-bar {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    .ability-dot {
+      width: 15px;
+      height: 15px;
+      background-color: #00ccff;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .history {
+      background-color: #222;
+      border-radius: 5px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
 
-  .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px auto;
-    width: 100%;
-    max-width: 1200px;
-  }
-
-  h1 {
-    color: #fff;
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-
-  .equipo-atlas {
-    width: 300px;
-    height: 300px;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    border: 5px solid #004488;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-
-  .equipo-atlas img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 5px;
-  }
-
-  .equipos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-
-  .equipo {
-    width: 150px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid #004488;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-
-  .equipo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 5px;
-  }
-
-  .texto {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;           
-  max-width: 900px;       
-  height: 400px;          
-  overflow-y: auto;       
-  box-shadow: 0 0 10px rgba(255, 250, 250, 0.5);
-  text-align: justify;
-}
-
-</style>
-
-<Layout title="Nueva Pestaña">
-  <main>
-    <div class="contenedor">
-
-      <h1>ATLAS F.C</h1>
-
-
-      <div class="equipo-atlas">
-        <a href="atlas">
+  <div class="container">
+    <div class="resume">
+      <div class="header">
+        <h1 class="text-4xl font-bold">ATLAS F.C</h1>
+      </div>
+      <div class="content">
+        <div class="logo">
           <img
             src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/atlas.png"
             alt="atlas"
           />
-        </a>
-      </div>
-
-
-      <div class="equipos">
-        <div class="equipo">
-          <a href="equipo">
-            <img
-              src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/Flag_of_Mexico.jpg"
-              alt="Equipo 1"
-            />
-          </a>
         </div>
-        <div class="equipo">
-          <img src="https://nuvvv-0115.sirv.com/Shared/la_seleccion-from-spar2099/MX_logo.png" alt="Equipo 2" />
+        <div class="about-club">
+          <h2 class="text-2xl font-bold mb-4">SOBRE EL CLUB</h2>
+          <p>FUNDACIÓN: 15 de agosto de 1916</p>
+          <p>UBICACIÓN: Guadalajara, Jalisco</p>
+          <p>ESTADIO: Estadio Jalisco</p>
+          <p>APODO: Los Rojinegros</p>
+          <h2 class="text-2xl font-bold mb-4">HISTORIA DEL CLUB</h2>
+          <p>El Atlas F.C. fue fundado el 15 de agosto de 1916 en Guadalajara, Jalisco. El equipo surgió tras el regreso de un grupo de jóvenes que habían estudiado en Inglaterra y se enamoraron del fútbol. Estos fundadores se reunieron en el Café Rimans, donde oficializaron la creación del club. En sus primeros años, Atlas participó en campeonatos locales junto a otros equipos emblemáticos como el Guadalajara y el Colón, consolidando rápidamente su identidad en la región.</p>
+          <p>En la década de los 40, Atlas vivió su época más gloriosa. Ganó la Copa México en 1945 y se convirtió en el primer club de Jalisco en conquistar ese título. También levantó su primer trofeo de Campeón de Campeones en 1946. Sin embargo, su mayor logro llegó en la temporada 1950-51, cuando obtuvo su único campeonato de liga, derrotando al Club León con un gol decisivo de Edwin Cubero en un partido clave. Este período consolidó a Atlas como una institución importante en el fútbol mexicano.</p>
+ 
         </div>
-      </div>
-
-
-      <div class="texto">
-        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
-          Fundación y Origen
-        </h1>        
-        <p>
-          El Atlas F.C. fue fundado el 15 de agosto de 1916 en Guadalajara, Jalisco. El equipo surgió tras el regreso de un grupo de jóvenes que habían estudiado en Inglaterra y se enamoraron del fútbol. Estos fundadores se reunieron en el Café Rimans, donde oficializaron la creación del club. En sus primeros años, Atlas participó en campeonatos locales junto a otros equipos emblemáticos como el Guadalajara y el Colón, consolidando rápidamente su identidad en la región
-        </p>
-        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
-          Éxitos en los Años Dorados
-        </h1>        
-        <p>
-          En la década de los 40, Atlas vivió su época más gloriosa. Ganó la Copa México en 1945 y se convirtió en el primer club de Jalisco en conquistar ese título. También levantó su primer trofeo de Campeón de Campeones en 1946. Sin embargo, su mayor logro llegó en la temporada 1950-51, cuando obtuvo su único campeonato de liga, derrotando al Club León con un gol decisivo de Edwin Cubero en un partido clave. Este período consolidó a Atlas como una institución importante en el fútbol mexicano
-        </p>
-        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
-          Años Difíciles y Descensos
-        </h1>        
-        <p>
-          Pese a sus éxitos tempranos, el club vivió momentos difíciles. Sufrió su primer descenso en 1954 y luego volvió a la segunda división en 1971 y 1978. En las décadas posteriores, Atlas atravesó altibajos, con algunas temporadas brillantes pero sin conseguir títulos de liga adicionales. Aun así, se destacó por su cantera, formando jugadores como Rafael Márquez y Jared Borgetti​
-        </p>
-        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
-          Resurgimiento y Campeonatos Recientes
-        </h1>        
-        <p>
-          Después de un largo periodo sin títulos, Atlas experimentó un renacer futbolístico en 2021 y 2022, conquistando dos títulos consecutivos de la Liga MX, interrumpiendo así una sequía de 70 años sin campeonatos. Estos logros marcaron un hito para la institución y renovaron la pasión de su afición, conocida como "La Fiel", que siempre ha acompañado al club en sus buenos y malos momentos​
-        </p>       
-        <h1 class="text-center my-4 font-bold" style="font-size: 26px; color: black;">
-          ¡La historia del Atlas es un reflejo de perseverancia y amor al fútbol, con una mezcla de éxitos, caídas y un fuerte espíritu de lucha!
-        </h1>        
-
+        <div class="achievements">
+          <h2 class="text-2xl font-bold mb-4">LOGROS</h2>
+          <div class="flex justify-between">
+            <span style="color: #00ccff;">1950-51</span>
+            <span>Campeón de Liga</span>
+          </div>
+          <div class="flex justify-between">
+            <span style="color: #00ccff;">2021</span>
+            <span>Campeón Apertura</span>
+          </div>
+          <div class="flex justify-between">
+            <span style="color: #00ccff;">2022</span>
+            <span>Campeón Clausura</span>
+          </div>
+        </div>
+        <div class="identity">
+          <h2 class="text-2xl font-bold mb-4">IDENTIDAD DEL EQUIPO</h2>
+          <div class="ability-bar">
+            <span class="w-24">Tradición</span>
+            {[...Array(9)].map((_, i) => (
+              <div class="ability-dot"></div>
+            ))}
+          </div>
+          <div class="ability-bar">
+            <span class="w-24">Cantera</span>
+            {[...Array(8)].map((_, i) => (
+              <div class="ability-dot"></div>
+            ))}
+          </div>
+          <div class="ability-bar">
+            <span class="w-24">Afición</span>
+            {[...Array(10)].map((_, i) => (
+              <div class="ability-dot"></div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
-  </main>
-
-  <footer class="footer">
-    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
-  </footer>
+  </div>
 </Layout>
